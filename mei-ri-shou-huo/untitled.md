@@ -39,10 +39,10 @@ description: 2021/01/29
 
 命令总结：
 
-* **ping：**检查源主机与目的主机之间网络是否连通，使用方式：`ping {ip}`；
-* **traceroute：**查看源主机与目的主机之间路由信息，使用方式：`traceroute {ip}`；
-* **telnet：**检查目的主机端口是否开放，使用方式：`telnet {ip} {port}`；
-* **lsof：**检查本地主机端口是否开放，使用方式：`lsof -i:{port}`；
+* **ping：**检查源主机与目的主机之间网络是否连通，使用方式：`ping {ip}`
+* **traceroute：**查看源主机与目的主机之间路由信息，使用方式：`traceroute {ip}`
+* **telnet：**检查目的主机端口是否开放，使用方式：`telnet {ip} {port}`
+* **lsof：**检查本地主机端口是否开放，使用方式：`lsof -i:{port}`
 
 ## 命令详解
 
