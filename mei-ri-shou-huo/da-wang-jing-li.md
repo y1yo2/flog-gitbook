@@ -28,7 +28,7 @@ description: 2021/01/29
 * 云环境访问机房，VPC访问 DCN+端口，再到 机房地址+端口；
 * 机房访问云环境，机房访问 CLB，经过 DCN，再到 CLB；
 
-（补充网络拓扑图）
+![&#x6253;&#x901A;&#x540E;&#x7F51;&#x7EDC;&#x62D3;&#x6251;&#x56FE;](../.gitbook/assets/002-da-tong-hou-wang-luo-tuo-pu-tu-.jpg)
 
 详细步骤：
 
