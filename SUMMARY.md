@@ -12,3 +12,8 @@
 
 * [Senior's blog](qi-yuan-xi-lie/untitled.md)
 
+## 每日随笔
+
+* [2021年](mei-ri-sui-bi/2021-nian/README.md)
+  * [February](mei-ri-sui-bi/2021-nian/february.md)
+
