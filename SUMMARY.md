@@ -7,6 +7,7 @@
 * [服务网格是怎么来的？](mei-ri-shou-huo/fu-wu-wang-ge-shi-zen-me-lai-de.md)
 * [研发流程科普](mei-ri-shou-huo/yan-fa-liu-cheng-ke-pu.md)
 * [打网经历](mei-ri-shou-huo/da-wang-jing-li.md)
+* [Confluence空间备份迁移、合并、删除权限](mei-ri-shou-huo/confluence-kong-jian-bei-fen-qian-yi-he-bing-shan-chu-quan-xian.md)
 
 ## 起源系列
 
