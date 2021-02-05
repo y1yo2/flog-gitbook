@@ -4,7 +4,7 @@ description: collect awesome blogs and show my respect.
 
 # Senior's blog
 
-![](../.gitbook/assets/image%20%284%29.png)
+![respect](../.gitbook/assets/image%20%284%29.png)
 
 1. **Christian Posta：**[**https://blog.christianposta.com/**](https://blog.christianposta.com/)\*\*\*\*
 
