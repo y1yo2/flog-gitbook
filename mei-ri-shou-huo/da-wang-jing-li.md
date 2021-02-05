@@ -158,7 +158,7 @@ ping和 traceroute（tracert） 都利用 ICMP 协议实现，ping 用来测试�
 
 ### VPC
 
-虚拟私有云（Chinaunicom Virtual Private Cloud），为云容器构建隔离的、用户可自主配置和管理的虚拟网络环境；定义业务安全组、IP地址段、带宽等网络特性。
+虚拟私有云（Virtual Private Cloud），为云容器构建隔离的、用户可自主配置和管理的虚拟网络环境；定义业务安全组、IP地址段、带宽等网络特性。
 
 ### CLB
 
