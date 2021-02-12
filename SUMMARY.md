@@ -18,3 +18,7 @@
 * [2021年](mei-ri-sui-bi/2021-nian/README.md)
   * [February](mei-ri-sui-bi/2021-nian/february.md)
 
+## 读书笔记
+
+* [非暴力沟通-01](du-shu-bi-ji/fei-bao-li-gou-tong-01.md)
+

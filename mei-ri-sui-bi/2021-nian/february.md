@@ -89,7 +89,22 @@ Feb.11
   * 总结，负反馈闭环提升（是什么？下次应该怎么做？）
 * 不要怕失败，因为只要不怕失败，总有机会再次尝试，进步；
 
+Feb.12
 
+* nginx的反向代理，server模块、location模块
+  * alias（别名）、root对路径处理的区别
+  * upstream模块负载均衡
+  * proxy-set-header防止请求头攻击
+
+```text
+proxy_redirect off;
+proxy_set_header Host      $host;
+proxy_pass       http://localhost:8000;
+```
+
+> 参考资料：[Nginx 常用配置总结](https://blog.csdn.net/wuxu_nanjing/article/details/79157597)
+>
+> 后续会根据官网文档进行学习和总结：[Nginx官网-proxy](http://nginx.org/en/docs/http/ngx_http_proxy_module.html)
 
 
 
