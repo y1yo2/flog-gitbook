@@ -106,9 +106,14 @@ proxy_pass       http://localhost:8000;
 >
 > 后续会根据官网文档进行学习和总结：[Nginx官网-proxy](http://nginx.org/en/docs/http/ngx_http_proxy_module.html)
 
+Feb.13
 
+* 提醒自己的时候，多考虑应该做什么；而不是不应该做什么；
+* 做决定的时候，使用好处、优点进行考量，劝说自己；
 
+Feb.14
 
+* 天气太热啦，为过年准备的新衣服穿不了；
 
 
 
