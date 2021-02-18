@@ -44,8 +44,6 @@ description: 2021/02/18
 
 通过对称加密对内容进行加密，可防止窃听（缺少密钥）；
 
-  
-
 ![&#x4F7F;&#x7528;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x8FDB;&#x884C;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;](../.gitbook/assets/008-dui-cheng-jia-mi-wang-luo-chuan-shu-.jpg)
 
 但是当传输双方交换对称加密的密钥时，是明文交换，一样存在泄露问题；当密钥泄露时，该方式和明文传输一样危险；
@@ -54,7 +52,7 @@ description: 2021/02/18
 
 为了解决消息传输的**窃听**问题，我们使用非对称加密的方式，例如https；
 
-（流程图）
+![&#x4F7F;&#x7528;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x8FDB;&#x884C;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;](../.gitbook/assets/008-fei-dui-cheng-jia-mi-wang-luo-chuan-shu-.jpg)
 
 client和server都用对方的**公钥**进行加密，加密的内容只能由对方的**私钥**解密；这就解决了在交换密钥和消息传输时，消息泄露的问题（**防窃听**）
 
