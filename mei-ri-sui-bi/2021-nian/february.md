@@ -133,6 +133,14 @@ Feb.17
 
 反向思考（正面）：主观认为别人好时，要思考他的缺点；认为别人坏时，要思考他的优点；
 
+Feb.19
+
+SSL协议层次（后续补充HTTPS和SSL的详细记录）：[https://blog.csdn.net/Better2326/article/details/48371241](https://blog.csdn.net/Better2326/article/details/48371241)
+
+SSL握手协议（应用层-表示层）&gt;SSL记录协议（应用层-会话层）&gt;tcp/ip（传输层-传输层）；（四层模型-七层模型）
+
+
+
 
 
 
