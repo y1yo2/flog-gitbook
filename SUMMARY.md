@@ -10,6 +10,7 @@
 * [Confluence空间备份迁移、合并、删除权限](mei-ri-shou-huo/confluence-kong-jian-bei-fen-qian-yi-he-bing-shan-chu-quan-xian.md)
 * [数字签名和数字证书](mei-ri-shou-huo/shu-zi-qian-ming-he-shu-zi-zheng-shu.md)
 * [NAT也有大学问](mei-ri-shou-huo/nat-ye-you-da-xue-wen.md)
+* [研发流程管理平台功能](mei-ri-shou-huo/yan-fa-liu-cheng-guan-li-ping-tai-gong-neng.md)
 
 ## 起源系列
 
