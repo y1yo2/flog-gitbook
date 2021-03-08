@@ -26,4 +26,5 @@
 ## 读书笔记
 
 * [非暴力沟通-01](du-shu-bi-ji/fei-bao-li-gou-tong-01.md)
+* [非暴力沟通-02](du-shu-bi-ji/fei-bao-li-gou-tong-02.md)
 
