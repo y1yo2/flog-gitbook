@@ -15,7 +15,7 @@ description: 咕噜的个人博客，记录工作、学习、生活；只学习�
 
 ### 起源系列
 
-* [Senior's blog](qi-yuan-xi-lie/untitled.md)
+* [Senior's blog](qi-yuan-xi-lie/seniors-blog.md)
 
 ### 每日随笔
 
