@@ -31,4 +31,5 @@
 ## 云原生 <a id="cloud-native"></a>
 
 * [虚拟机、容器、云原生-1](cloud-native/xu-ni-ji-rong-qi-yun-yuan-sheng-1.md)
+* [虚拟机、容器、云原生-2](cloud-native/xu-ni-ji-rong-qi-yun-yuan-sheng-2.md)
 
