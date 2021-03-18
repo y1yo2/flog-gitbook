@@ -26,13 +26,15 @@ description: 2021/03/17
 * 用户在虚拟环境中能够与计算任务交互，并运行计算；
 * 虚拟机作为单个数据文件运行。打开和工作的方式一致，可在任意计算机上打开并运行（可迁移）；
 
-（虚拟化结构图）
+![&#x865A;&#x62DF;&#x5316;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;](../.gitbook/assets/xu-ni-hua-jie-gou-tu-.jpg)
 
 * 解决了基于硬件资源创建服务的局限；
   * 在不同硬件设备中，操作系统、应用程序可运行的类型和版本不同；
   * 多个服务器相互隔离，无法分区分配，共享资源；
 
-（虚拟化解决的问题）
+![&#x865A;&#x62DF;&#x5316;&#x524D;](../.gitbook/assets/xu-ni-hua-qian-.png)
+
+![&#x865A;&#x62DF;&#x5316;&#x540E;](../.gitbook/assets/xu-ni-hua-hou-.png)
 
 ### 虚拟化的类型
 
@@ -69,7 +71,7 @@ description: 2021/03/17
   * Microsoft Hyper-V；
 * 业务场景：企业数据中心或其他基于服务器的环境；实现**主机资源池化**和分配，**客户机管理**；
 
-（Hypervisor类型1结构图）
+![HYPERVISOR&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x4E00;](../.gitbook/assets/hypervisor-lei-xing-1.jpg)
 
 类型2：
 
@@ -78,7 +80,7 @@ description: 2021/03/17
   * Oracle VirtualBox；
 * 业务场景：满足在个人主机运行多套操作系统的需求；
 
-（Hypervisor类型2结构图）
+![](../.gitbook/assets/hypervisor-lei-xing-2.jpg)
 
 两种类型的虚拟机监控程序，都必定包含资源管理的组件，如内存管理器、进程调度程序、I/O（输入输出）堆栈、设备驱动程序、安全管理器、网络堆栈等。
 
