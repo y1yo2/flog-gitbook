@@ -33,4 +33,5 @@
 
 * [虚拟机、容器、云原生-1](cloud-native/xu-ni-ji-rong-qi-yun-yuan-sheng-1.md)
 * [虚拟机、容器、云原生-2](cloud-native/xu-ni-ji-rong-qi-yun-yuan-sheng-2.md)
+* [云原生-存储类型](cloud-native/yun-yuan-sheng-cun-chu-lei-xing.md)
 
