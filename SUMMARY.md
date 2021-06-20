@@ -38,3 +38,8 @@
 * [虚拟机、容器、云原生-2](cloud-native/xu-ni-ji-rong-qi-yun-yuan-sheng-2.md)
 * [云原生-存储类型](cloud-native/yun-yuan-sheng-cun-chu-lei-xing.md)
 
+## 好好做项目
+
+* [简介](hao-hao-zuo-xiang-mu/jian-jie.md)
+* [项目启动脚本](hao-hao-zuo-xiang-mu/xiang-mu-qi-dong-jiao-ben.md)
+
