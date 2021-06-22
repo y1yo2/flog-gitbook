@@ -28,7 +28,14 @@ pidstr=`ps -ef|grep ***.jar|grep -v 'grep'|awk '{print $2}'`
 java $JAVA_OPT -jar ***.jar >/dev/null 2>&1 &
 ```
 
+通过shell脚本中的if 参数-a至-z，`if[ -z "string" ]` “string”的长度为零则为真，判断pid进程号是否存在。
 
+```text
+if [ expression ]
+then
+   Statement(s) to be executed if expression is true
+fi
+```
 
 
 
