@@ -42,4 +42,5 @@
 
 * [简介](hao-hao-zuo-xiang-mu/jian-jie.md)
 * [项目启动脚本](hao-hao-zuo-xiang-mu/xiang-mu-qi-dong-jiao-ben.md)
+* [Excel计算](hao-hao-zuo-xiang-mu/excel-ji-suan.md)
 
