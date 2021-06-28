@@ -44,3 +44,7 @@
 * [项目启动脚本](hao-hao-zuo-xiang-mu/xiang-mu-qi-dong-jiao-ben.md)
 * [Excel计算](hao-hao-zuo-xiang-mu/excel-ji-suan.md)
 
+## 数据库
+
+* [MySQL保证数据持久性](shu-ju-ku/mysql-bao-zheng-shu-ju-chi-jiu-hua.md)
+
