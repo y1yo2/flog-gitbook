@@ -43,6 +43,7 @@
 * [简介](hao-hao-zuo-xiang-mu/jian-jie.md)
 * [项目启动脚本](hao-hao-zuo-xiang-mu/xiang-mu-qi-dong-jiao-ben.md)
 * [Excel计算](hao-hao-zuo-xiang-mu/excel-ji-suan.md)
+* [分布式系统认证](hao-hao-zuo-xiang-mu/fen-bu-shi-xi-tong-ren-zheng.md)
 
 ## 数据库
 
