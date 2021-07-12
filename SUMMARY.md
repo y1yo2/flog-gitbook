@@ -25,6 +25,7 @@
   * [April](mei-ri-sui-bi/2021-nian/april.md)
   * [May](mei-ri-sui-bi/2021-nian/may.md)
   * [June](mei-ri-sui-bi/2021-nian/june.md)
+  * [July](mei-ri-sui-bi/2021-nian/july.md)
 * [备注](mei-ri-sui-bi/bei-zhu.md)
 
 ## 读书笔记
