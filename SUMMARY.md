@@ -46,6 +46,7 @@
 * [Excel计算](hao-hao-zuo-xiang-mu/excel-ji-suan.md)
 * [分布式系统认证](hao-hao-zuo-xiang-mu/fen-bu-shi-xi-tong-ren-zheng.md)
 * [Maven统一版本管理](hao-hao-zuo-xiang-mu/maven-tong-yi-ban-ben-guan-li.md)
+* [统一异常处理与响应](hao-hao-zuo-xiang-mu/tong-yi-yi-chang-chu-li-yu-xiang-ying.md)
 
 ## 数据库
 
