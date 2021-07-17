@@ -79,7 +79,20 @@ spring-security-oauth2实现方式，由认证服务和资源服务组成
 * 资源服务
   * 校验令牌合法性：Oauth2AuthenticationProcessingFilter
 
+### 认证授权服务
 
+1. 添加 `@EnableAuthorizationServer` 注解
+2. 通过 AuthorizationServerConfigurerAdapter 适配器，配置客户端信息、令牌/票据的管理方式（存储、刷新、有效期、端点url）、需认证授权的安全约束。
+3. 
+令牌访问端点《》授权类型
+
+* 认证管理器（密码授权类型）
+* UserDetailsService（刷新令牌授权类型）
+* authorizationCodeService（授权码类型）
+* implictitGrantService（隐式授权模式）
+* tokenGranter（全自定义模式）
+
+默认端点
 
 
 
