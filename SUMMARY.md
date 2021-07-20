@@ -47,6 +47,7 @@
 * [分布式系统认证](hao-hao-zuo-xiang-mu/fen-bu-shi-xi-tong-ren-zheng.md)
 * [Maven统一版本管理](hao-hao-zuo-xiang-mu/maven-tong-yi-ban-ben-guan-li.md)
 * [统一异常处理与响应](hao-hao-zuo-xiang-mu/tong-yi-yi-chang-chu-li-yu-xiang-ying.md)
+* [虚机内网ssh+访问外网](hao-hao-zuo-xiang-mu/xu-ji-nei-wang-ssh+-fang-wen-wai-wang.md)
 
 ## 数据库
 
