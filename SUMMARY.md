@@ -48,6 +48,7 @@
 * [Maven统一版本管理](hao-hao-zuo-xiang-mu/maven-tong-yi-ban-ben-guan-li.md)
 * [统一异常处理与响应](hao-hao-zuo-xiang-mu/tong-yi-yi-chang-chu-li-yu-xiang-ying.md)
 * [虚机内网ssh+访问外网](hao-hao-zuo-xiang-mu/xu-ji-nei-wang-ssh+-fang-wen-wai-wang.md)
+* [Marathon部署docker容器nacos](hao-hao-zuo-xiang-mu/marathon-bu-shu-docker-rong-qi-nacos.md)
 
 ## 数据库
 
