@@ -45,10 +45,12 @@
 * [项目启动脚本](hao-hao-zuo-xiang-mu/xiang-mu-qi-dong-jiao-ben.md)
 * [Excel计算](hao-hao-zuo-xiang-mu/excel-ji-suan.md)
 * [分布式系统认证](hao-hao-zuo-xiang-mu/fen-bu-shi-xi-tong-ren-zheng.md)
+* [分布式系统认证Demo](hao-hao-zuo-xiang-mu/fen-bu-shi-xi-tong-ren-zheng-demo.md)
 * [Maven统一版本管理](hao-hao-zuo-xiang-mu/maven-tong-yi-ban-ben-guan-li.md)
 * [统一异常处理与响应](hao-hao-zuo-xiang-mu/tong-yi-yi-chang-chu-li-yu-xiang-ying.md)
 * [虚机内网ssh+访问外网](hao-hao-zuo-xiang-mu/xu-ji-nei-wang-ssh+-fang-wen-wai-wang.md)
 * [Marathon部署docker容器nacos](hao-hao-zuo-xiang-mu/marathon-bu-shu-docker-rong-qi-nacos.md)
+* [docker基础镜像](hao-hao-zuo-xiang-mu/docker-ji-chu-jing-xiang.md)
 
 ## 数据库
 
