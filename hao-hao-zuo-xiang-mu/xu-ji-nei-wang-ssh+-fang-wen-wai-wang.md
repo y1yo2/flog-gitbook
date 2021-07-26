@@ -24,15 +24,52 @@ description: 本机ssh（固定ip）登录virtual box，虚机可访问外网
 
 ### 解决方案
 
-使用Hyper-V创建虚拟网卡。
+* 总体思路
+
+1. 桥接机器的物理网卡，自动获取IP、DNS，用于上外网。
+2. 桥接一张虚拟网卡，设置固定网段、IP，用于固定IP，主机内SSH访问。
+
+* 使用Hyper-V创建虚拟网卡。
 
 {% embed url="https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/about/" %}
 
+1. 创建内部类型，虚拟交换机。
+2. 通过Windows的控制面板-网络连接，设置IP地址、子网掩码，固定虚拟网卡的网段。（例，IP：192.168.1.1，掩码：255.255.255.0，网段：192.168.1.x）
+3. 虚机桥接物理网卡、虚拟网卡。
+4. 虚机内设置两张网卡的配置。
+
+物理网卡配置（默认网卡，访问外网）：
+
+```bash
+BOOTPROTO=dhcp #开启DHCP服务，自动获取主机IP
+ONBOOT=yes #开机自动连接网络
+
+NAME=eth0
+DEVICE=eth0
+```
+
+虚拟网卡配置（固定IP，内网互访）：
+
+```bash
+BOOTPROTO=static #固定IP
+ONBOOT=yes #开机自动连接网络
+IPADDR=192.168.1.2
+NETMASK=255.255.255.0
+
+NAME=eth1
+DEVICE=eth1
+```
+
+重启网络：
+
+```bash
+sudo systemctl restart network
+sudo ip addr
+```
 
 
 
-
-安装 netstat 命令
+* 安装 netstat 命令
 
 netstat命令包含在net-tools软件包中，可通过yum在线安装，或rpm安装包安装。
 
@@ -93,6 +130,16 @@ could not resolve host download.docker.com
 * /etc/nsswitch.conf：这个档案『决定』先使用 /etc/hosts 还是 /etc/resolv.conf 的设定；
 
 3.服务 systemd-resolved 找不到
+
+linux的init有关
+
+
+
+4.主机可ping通虚机，但ssh失败
+
+原因是，虚机的ip设置为网卡的网段ip，造成ip冲突。
+
+
 
 
 
