@@ -37,7 +37,7 @@ description: 2021/03/18
   * 包含整个操作系统；
   * 千兆字节大小；
 
-（容器与虚拟机的对比图）
+![&#x865A;&#x62DF;&#x673A;&#x4E0E;&#x5BB9;&#x5668;&#x5BF9;&#x6BD4;&#x56FE;](../.gitbook/assets/14-xu-ji-yu-rong-qi-.png)
 
 ### 容器的实现技术
 
@@ -83,7 +83,7 @@ Docker新技术带来的影响：
     * OCI（开放容器镜像）
 * 通过分层的容器镜像，用户可快速构建容器并分享；
 
-（Linux容器与Docker的对比图）
+![Docker&#x4E0E;LCX&#x5BF9;&#x6BD4;&#x56FE;](../.gitbook/assets/15docker-yu-lcx.png)
 
 ### Docker的优点：
 
@@ -146,6 +146,8 @@ Docker新技术带来的影响：
 > 容器必须与底层操作系统兼容。（ARM Linux 系统运行 ARM Linux 容器，x86 Linux 系统运行 x86 Linux 容器，x86 Windows 系统运行 x86 Windows 容器）；
 >
 > 虚拟机则是为了解决底层硬件的隔离问题；
+>
+> Docker 是比虚拟机的虚拟化程度更弱、效率更高的线程级别的隔离；
 
 ### 各自的适用场景
 
