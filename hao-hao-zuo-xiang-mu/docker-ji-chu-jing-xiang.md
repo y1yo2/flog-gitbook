@@ -31,6 +31,22 @@ ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /etc/
 ENTRYPOINT ['tail', '-f', '/dev/null']
 ```
 
+* CMD 与 ENTRYPOINT
+
+关于CMD：
+
+1. Dockerfile存在多个CMD，只有最后一个CMD生效。
+2. CMD的主要目的是为正在启动的容器提供默认值。
+3. 如果存在ENTRYPOINT，则CMD忽略可执行部分，只为ENTRYPOINT提供默认值。
+4. 
+> 用法：
+>
+> CMD \["可执行文件", "param"\]   （推荐用法）
+>
+> CMD \["param"\]   （作为 ENTRYPOINT 的默认参数）
+>
+> CMD 命令 param
+
 * Docker运行的监控进程，PID为1
 
 
@@ -40,6 +56,12 @@ ENTRYPOINT ['tail', '-f', '/dev/null']
 
 
 * 更优雅的解决方式
+
+
+
+
+
+### 任务二：可复用基础镜像
 
 
 
