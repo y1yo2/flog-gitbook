@@ -12,6 +12,7 @@
 * [NAT也有大学问](mei-ri-shou-huo/nat-ye-you-da-xue-wen.md)
 * [研发流程管理平台功能](mei-ri-shou-huo/yan-fa-liu-cheng-guan-li-ping-tai-gong-neng.md)
 * [linux-vim入门](mei-ri-shou-huo/linux-vim-ru-men.md)
+* [网关、代理、防火墙](mei-ri-shou-huo/wang-guan-dai-li-fang-huo-qiang.md)
 
 ## 起源系列
 
@@ -53,6 +54,7 @@
 * [Marathon部署docker容器nacos](hao-hao-zuo-xiang-mu/marathon-bu-shu-docker-rong-qi-nacos.md)
 * [docker基础镜像](hao-hao-zuo-xiang-mu/docker-ji-chu-jing-xiang.md)
 * [Git多仓库管理分支](hao-hao-zuo-xiang-mu/git-duo-cang-ku-guan-li-fen-zhi.md)
+* [Mybatis总结](hao-hao-zuo-xiang-mu/mybatis-zong-jie.md)
 
 ## 数据库
 

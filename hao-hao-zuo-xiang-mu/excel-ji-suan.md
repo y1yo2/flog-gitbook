@@ -42,3 +42,23 @@ description: 处理测试数据的在 Excel 公式中使用计算运算符
 
 {% embed url="https://support.microsoft.com/zh-cn/office/%E5%9C%A8-excel-%E5%85%AC%E5%BC%8F%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%AE%A1%E7%AE%97%E8%BF%90%E7%AE%97%E7%AC%A6-78be92ad-563c-4d62-b081-ae6da5c2ca69" %}
 
+## 常用函数
+
+### VLOOKUP函数
+
+一列当前值，与一列字典值匹配。
+
+VLOOKUP\(当前值的单元格, 匹配的范围, 取第几列为结果, FALSE-是否模糊匹配\)
+
+SUM把VLOOKUP的结果数组求和。
+
+F9可执行公式，查看结果。
+
+ctrl+shift+enter，数组运算，自动纠正公式。
+
+
+
+
+
+
+
