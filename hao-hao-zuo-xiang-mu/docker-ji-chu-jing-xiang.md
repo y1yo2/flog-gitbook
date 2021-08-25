@@ -77,6 +77,8 @@ ENTRYPOINT ['tail', '-f', '/dev/null']
 
 
 
+### 生命周期与前台进程
+
 * 前台进程，后台进程，设置监控进程防止容器退出
 
 docker容器生命周期绑定监控进程，若监控进程运行结束，则容器自动停止。
@@ -95,9 +97,45 @@ docker容器生命周期绑定监控进程，若监控进程运行结束，则�
 
 ## 任务二：可复用基础镜像
 
+### 关于ENV
 
+Dockerfile设置容器的环境变量。
 
+* 定义ENV时，可使用已定义的环境变量。
+* 默认环境变量有$HOME, $PATH, $HOSTNAME。
+* 镜像是层次文件系统，一条指令一个镜像层。因此ENV定义的变量，在后续层次才能使用。同一层ENV无法相互引用。
 
+```bash
+ENV a=a1
+ENV a=a2 b=$a
+ENV c=$a
+
+env #查看容器的环境变量。b=a1, c=a2 
+```
+
+### 关于环境变量
+
+* 设置环境变量
+
+`/etc/profile` 设置变量后，对linux下所有用户有效。
+
+`source /etc/profile` 让修改马上生效。
+
+`~/.bash_profile` 设置变量，仅对linux下当前用户有效。
+
+`source ~/.bash_profile` 让修改马上生效
+
+`export PATH=/home/me/apps:$PATH` 设置变量，仅对当前shell\(sh/bash\)有效。直接生效，关闭shell后失效。
+
+* 查看环境变量
+
+ `echo $SHELL` 显示一个环境变量
+
+ `env`  显示所有环境变量
+
+ `unset $TEST`  删除一个环节变量
+
+ `readonly $TEST`  设置变量为只读，不可修改删除
 
 
 
