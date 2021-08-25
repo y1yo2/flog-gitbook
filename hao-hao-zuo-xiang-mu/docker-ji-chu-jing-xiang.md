@@ -137,6 +137,70 @@ env #查看容器的环境变量。b=a1, c=a2
 
  `readonly $TEST`  设置变量为只读，不可修改删除
 
+### 关于执行shell脚本（exec模式）
+
+ `./xxx.sh` 使用shell脚本内指定的sh/bash作为subshell（子shell）执行，但shell脚本需要**执行权限**。  
+
+ `sh/bash xxx.sh` 使用sh/bash作为subshell（子shell）执行，shell脚本无需执行权限。  
+
+ `source xxx.sh`  或 `. xxx.sh` 使用当前shell执行shell脚本，脚本无需执行权限。  
+
+### 关于启动进程参数
+
+执行shell命令时，默认打开3个文件。
+
+| **类型** | **文件描述符** | **默认情况** | **对应文件句柄位置** |
+| :---: | :---: | :---: | :---: |
+| 标准输入（standard input） | 0 | 从键盘获得输入 | /proc/slef/fd/0 |
+| 标准输出（standard output） | 1 | 输出到屏幕（即控制台） | /proc/slef/fd/1 |
+| 错误输出（error output） | 2 | 输出到屏幕（即控制台） | /proc/slef/fd/2 |
+
+因此命令执行时，默认从键盘获取输入（使用0），结果输出到屏幕（使用1）。
+
+* 输出输入重定向
+
+| **命令** | **作用** |
+| :--- | :--- |
+| 1&gt;filename | 标准输出重定向到file |
+| &gt;filename | 同上 |
+| 2&gt;filename | 错误输出重定向到file |
+| 0&lt;filename | file作为标准输入 |
+| &lt;filename | 同上 |
+
+* 常用的重定向
+
+ `>/dev/null` ，标准输出指向/dev/null（linux的空设备文件，往该文件写入内容会丢失）。
+
+ `2>&1` ，使用&将两个输出绑定，错误输出指向标准输出。
+
+ `>/dev/null 2>&1` ，先将标准输出指向/dev/null，再将错误输出指向标准输出即/dev/null。
+
+### 关于前台进程、后台进程
+
+前台进程：进程执行情况输出shell终端。终端关闭会导致进程终止。
+
+* 后台形式启动进程
+
+命令末尾加 & 符号，后台运行进程。但终端关闭，进程会终止。
+
+nohup 加上后，用户退出或终端关闭都不影响当前后台进程。
+
+* 查看进程
+
+ `jobs -l` ，查看后台进程。
+
+ `ps -aux`，查看所有进程。
+
+ `kill %jobid` ， `kill pid` ，终止进程。
+
+* 运行中进程放入后台、前台
+
+运行中的前台进程，ctrl + z 放入后台并暂停。
+
+ `bg %jobid` 将暂停的后台进程运行。
+
+ `fg %jobid` 将后台进程放上前台。
+
 
 
 
