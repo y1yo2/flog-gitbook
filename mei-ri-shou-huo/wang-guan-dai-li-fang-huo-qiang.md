@@ -42,6 +42,29 @@ F5
 
 
 
+正向代理例子：
+
+客户端要访问Internet，则要通过代理服务器访问。即，客户端只能通过访问局域网内，甚至是同服务器中的nginx转发访问Internet。
+
+客户端通过HTTP访问代理，代理通过监听不同的端口，分别处理HTTP和HTTPs请求。
+
+```bash
+server {
+    resolver 114.114.114.114; #指定DNS服务器
+    listen 80;
+    location / {
+    }
+}
+server {
+    resolver 114.114.114.114; # 指定DNS服务器
+    listen 443;
+    location / {
+    }
+}
+```
+
+
+
 ### 虚拟私有网络
 
 Virtual Private Network\(VPN\)
