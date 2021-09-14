@@ -12,7 +12,7 @@
 * [NAT也有大学问](mei-ri-shou-huo/nat-ye-you-da-xue-wen.md)
 * [研发流程管理平台功能](mei-ri-shou-huo/yan-fa-liu-cheng-guan-li-ping-tai-gong-neng.md)
 * [linux-vim入门](mei-ri-shou-huo/linux-vim-ru-men.md)
-* [网关、代理、防火墙](mei-ri-shou-huo/wang-guan-dai-li-fang-huo-qiang.md)
+* [代理、网关](mei-ri-shou-huo/wang-guan-dai-li-fang-huo-qiang.md)
 
 ## 起源系列
 
