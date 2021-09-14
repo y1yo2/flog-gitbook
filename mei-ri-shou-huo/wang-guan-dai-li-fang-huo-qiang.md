@@ -16,9 +16,8 @@ CLB/SLB，即云环境-负载均衡。作为流行云原生的2021年，经常�
 
 CLB作为云环境中计算资源的负载均衡产品，是反向代理的一种实现。他分为四层监听（传输层，tcp、udp协议），七层监听（应用层，http、https协议）。
 
-四层监听，通过 LVS（Linux Virtual Server） + keepalived实现。
-
-七层监听，通过 nginx、HAproxy 等实现反向代理。
+* 四层监听，通过 LVS（Linux Virtual Server） + keepalived实现
+* 七层监听，通过 nginx、HAproxy 等实现反向代理。
 
 ### CLB架构
 

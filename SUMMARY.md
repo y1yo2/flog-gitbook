@@ -56,6 +56,7 @@
 * [docker操作](hao-hao-zuo-xiang-mu/docker-cao-zuo.md)
 * [Git多仓库管理分支](hao-hao-zuo-xiang-mu/git-duo-cang-ku-guan-li-fen-zhi.md)
 * [Mybatis总结](hao-hao-zuo-xiang-mu/mybatis-zong-jie.md)
+* [部署MongoDB-standalone](hao-hao-zuo-xiang-mu/bu-shu-mongodbstandalone.md)
 
 ## 数据库
 
