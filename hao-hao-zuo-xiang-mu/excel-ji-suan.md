@@ -48,13 +48,10 @@ description: 处理测试数据的在 Excel 公式中使用计算运算符
 
 一列当前值，与一列字典值匹配。
 
-VLOOKUP\(当前值的单元格, 匹配的范围, 取第几列为结果, FALSE-是否模糊匹配\)
-
-SUM把VLOOKUP的结果数组求和。
-
-F9可执行公式，查看结果。
-
-ctrl+shift+enter，数组运算，自动纠正公式。
+1. VLOOKUP\(当前值的单元格, 匹配的范围, 取第几列为结果, FALSE-是否模糊匹配\)
+2. SUM把VLOOKUP的结果数组求和。
+3. F9执行公式，查看结果。
+4. ctrl+shift+enter，数组运算，自动纠正公式。（SUM包含VLOOKUP时必须使用该操作）
 
 
 
