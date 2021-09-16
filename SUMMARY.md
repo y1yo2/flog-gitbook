@@ -65,4 +65,5 @@
 ## 手写Spring
 
 * [Step 01：实现简单容器](shou-xie-spring/step-01-shi-xian-jian-dan-rong-qi.md)
+* [Step 02：Bean的定义、注册、获取](shou-xie-spring/step-02bean-de-ding-yi-zhu-ce-huo-qu.md)
 
