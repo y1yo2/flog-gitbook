@@ -13,6 +13,7 @@
 * [研发流程管理平台功能](mei-ri-shou-huo/yan-fa-liu-cheng-guan-li-ping-tai-gong-neng.md)
 * [linux-vim入门](mei-ri-shou-huo/linux-vim-ru-men.md)
 * [代理、网关](mei-ri-shou-huo/wang-guan-dai-li-fang-huo-qiang.md)
+* [浅谈实例化](mei-ri-shou-huo/qian-tan-shi-li-hua.md)
 
 ## 起源系列
 
