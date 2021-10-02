@@ -68,4 +68,5 @@
 * [Step 01：实现简单容器](shou-xie-spring/step-01-shi-xian-jian-dan-rong-qi.md)
 * [Step 02：Bean的定义、注册、获取](shou-xie-spring/step-02bean-de-ding-yi-zhu-ce-huo-qu.md)
 * [Step 03：带参构造函数](shou-xie-spring/step-03-dai-can-gou-zao-han-shu.md)
+* [Step 04：依赖注入](shou-xie-spring/step-04-yi-lai-zhu-ru.md)
 
