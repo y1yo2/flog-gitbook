@@ -58,6 +58,7 @@
 * [Git多仓库管理分支](hao-hao-zuo-xiang-mu/git-duo-cang-ku-guan-li-fen-zhi.md)
 * [Mybatis总结](hao-hao-zuo-xiang-mu/mybatis-zong-jie.md)
 * [部署MongoDB-standalone](hao-hao-zuo-xiang-mu/bu-shu-mongodbstandalone.md)
+* [工程作者信息](hao-hao-zuo-xiang-mu/gong-cheng-zuo-zhe-xin-xi.md)
 
 ## 数据库
 
@@ -69,4 +70,5 @@
 * [Step 02：Bean的定义、注册、获取](shou-xie-spring/step-02bean-de-ding-yi-zhu-ce-huo-qu.md)
 * [Step 03：带参构造函数](shou-xie-spring/step-03-dai-can-gou-zao-han-shu.md)
 * [Step 04：依赖注入](shou-xie-spring/step-04-yi-lai-zhu-ru.md)
+* [Step 05：读取配置](shou-xie-spring/step-05.md)
 
