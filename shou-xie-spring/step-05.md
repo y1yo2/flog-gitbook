@@ -105,16 +105,50 @@ public class ClassPathResource implements Resource {
 }
 ```
 
-
+#### FileSystemResource
 
 ```java
-public
+public class FileSystemResource implements Resource{
+
+    private final String path;
+
+    private final File file;
+
+    @Override
+    public InputStream getInputStream() throws Exception {
+        InputStream inputStream = new FileInputStream(file);
+        if (inputStream == null) {
+            throw new FileNotFoundException(this.path + "cannot be opened because file not found");
+        }
+        return inputStream;
+    }
+}
 ```
 
 
 
 ```java
-public
+public class UrlResource implements Resource {
+
+    private final String path;
+
+    private final URL url;
+
+    @Override
+    public InputStream getInputStream() throws Exception {
+        URLConnection connection = this.url.openConnection();
+
+        try {
+            return connection.getInputStream();
+//            return testGet();
+        }catch (IOException e) {
+            if (connection instanceof HttpURLConnection) {
+                 ((HttpURLConnection) connection).disconnect();
+            }
+            throw e;
+        }
+
+    }
 ```
 
 
