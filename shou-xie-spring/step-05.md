@@ -202,21 +202,159 @@ public interface BeanDefinitionReader {
 }
 ```
 
-
+### AbstractBeanDefinitionReader
 
 ```java
+public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader{
+
+    private final BeanDefinitionRegistry beanDefinitionRegistry;
+
+    private final ResourceLoader resourceLoader;
+
+    public AbstractBeanDefinitionReader(BeanDefinitionRegistry beanDefinitionRegistry) {
+        this.beanDefinitionRegistry = beanDefinitionRegistry;
+        this.resourceLoader = new DefaultResourceLoader();
+    }
+
+    public AbstractBeanDefinitionReader(BeanDefinitionRegistry beanDefinitionRegistry, ResourceLoader resourceLoader) {
+        this.beanDefinitionRegistry = beanDefinitionRegistry;
+        this.resourceLoader = resourceLoader;
+    }
+
+    @Override
+    public BeanDefinitionRegistry getBeanDefinitionRegistry() {
+        return beanDefinitionRegistry;
+    }
+
+    @Override
+    public ResourceLoader getResourceLoader() {
+        return resourceLoader;
+    }
+
+}
+```
+
+### XMLBeanDefinitionReader
+
+```java
+public class XMLBeanDefinitionReader extends AbstractBeanDefinitionReader {
+
+    public XMLBeanDefinitionReader(BeanDefinitionRegistry beanDefinitionRegistry) {
+        super(beanDefinitionRegistry);
+    }
+
+    public XMLBeanDefinitionReader(BeanDefinitionRegistry beanDefinitionRegistry, ResourceLoader resourceLoader) {
+        super(beanDefinitionRegistry, resourceLoader);
+    }
+
+
+    @Override
+    public void loadResource(Resource... resources) {
+        for (Resource resource:resources) {
+            loadResource(resource);
+        }
+    }
+
+    @Override
+    public void loadResource(String path) {
+        ResourceLoader resourceLoader = getResourceLoader();
+        Resource resource = resourceLoader.getResource(path);
+        loadResource(resource);
+    }
+
+    /**
+     * @description 统一加载资源入口
+     * @param resource
+     */
+    @Override
+    public void loadResource(Resource resource) {
+        try (InputStream is = resource.getInputStream();){
+            doLoadResource(is);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void doLoadResource(InputStream is) throws ClassNotFoundException, RuntimeException {
+        Document document = XmlUtil.readXML(is);
+        Element root = document.getDocumentElement();
+        NodeList nodes = root.getChildNodes();
+        for (int i=0;i<nodes.getLength();i++) {
+            // 类型为Element
+            if (!(nodes.item(i) instanceof Element)) {
+                continue;
+            }
+            // 标签名为bean
+            if (!"bean".equals(nodes.item(i).getNodeName())) {
+                continue;
+            }
+
+            // 解析标签
+            Element element = (Element) nodes.item(i);
+            String id = element.getAttribute("id");
+            String classPath = element.getAttribute("class");
+            // 定义Bean
+            Class clazz = Class.forName(classPath);
+            BeanDefinition beanDefinition = new BeanDefinition(clazz);
+
+            // 读取下级标签（属性值）
+            NodeList eNodes = element.getChildNodes();
+            for (int j=0;j<eNodes.getLength();j++) {
+                // 类型为Element
+                if (!(eNodes.item(j) instanceof Element)) {
+                    continue;
+                }
+                // 标签名为property
+                if (!"property".equals(eNodes.item(j).getNodeName())) {
+                    continue;
+                }
+                // 解析标签
+                Element eElement = (Element) eNodes.item(j);
+                String name = eElement.getAttribute("name");
+                String value = eElement.getAttribute("value");
+                String ref = eElement.getAttribute("ref");
+                // 定义属性
+                Object propertyValue = StrUtil.isNotEmpty(ref)?new BeanReference(ref):value;
+                if (beanDefinition.getProperties() != null) {
+                    beanDefinition.getProperties().getProperties().add(new Property(name, propertyValue));
+                } else {
+                    beanDefinition.setProperties(new Properties());
+                    beanDefinition.getProperties().getProperties().add(new Property(name, propertyValue));
+                }
+            }
+
+            // 注册BeanDefinition
+            if (getBeanDefinitionRegistry().containBeanDefinition(id)) {
+                throw new RuntimeException("Duplicate beanName[" + id + "] is not allowed");
+            }
+            getBeanDefinitionRegistry().registryBeanDefinition(id, beanDefinition);
+
+        }
+
+
+    }
+
+}
 ```
 
 
 
 ```java
-public
-```
+@Test
+    public void test_classpath_xml() {
 
+        DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 
+        XMLBeanDefinitionReader xmlReader = new XMLBeanDefinitionReader(beanFactory);
+        // 等于
+//        XMLBeanDefinitionReader xmlReader = new XMLBeanDefinitionReader(beanFactory, new DefaultResourceLoader());
 
-```java
-public
+        xmlReader.loadResource("classpath:spring.xml");
+
+        UserService userService = beanFactory.getBean("userService", UserService.class);
+        userService.queryUserInfo();
+
+    }
 ```
 
 
