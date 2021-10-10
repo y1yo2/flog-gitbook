@@ -1,12 +1,37 @@
 ---
 description: 10/03
 ---
-
 # Step 05：读取配置
 
 ## 一、背景
 
 （补充上一节测试类截图）
+
+```java
+@Test
+    public void beanReferenceTest() {
+        // 1、初始化 BeanFactory
+        DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
+
+        // 2、dao注册
+        PropertyValues innerPVs = new PropertyValues();
+        innerPVs.getPvs().add(new PropertyValue("inStr", "identify String"));
+        BeanDefinition innerBeanDef = new BeanDefinition(InnerImpl.class, innerPVs);
+        // 3、service注册，设置属性dao
+        PropertyValues userPVs = new PropertyValues();
+        userPVs.getPvs().add(new PropertyValue("innerImpl", new BeanReference(InnerImplBeanName)));
+        BeanDefinition userBeanDef = new BeanDefinition(UserService.class, userPVs);
+
+        beanFactory.putBeanDefinition(InnerImplBeanName, innerBeanDef);
+        beanFactory.putBeanDefinition(UserServiceBeanName, userBeanDef);
+
+        // 4、service获取bean
+        UserService userService = (UserService) beanFactory.getBean(UserServiceBeanName);
+        userService.queryUserInfo();
+        userService.getInnerImpl().queryStr();
+
+    }
+```
 
 将 BeanDefinition放入 xml配置文件中，通过读取并解析xml生成 BeanDefinition。
 
@@ -16,7 +41,7 @@ description: 10/03
 
 ## 二、设计
 
-![&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x76F8;&#x5173;UML&#x56FE;](../.gitbook/assets/step05-du-qu-pei-zhi-resource-xiang-guan-.png)
+![读取配置相关UML图](../.gitbook/assets/step05-du-qu-pei-zhi-resource-xiang-guan-.png)
 
 【读取配置部分】
 
@@ -30,7 +55,7 @@ description: 10/03
 
 3、**统一**使用ResourceLoader读取配置，使用BeanDefinitionRegistry注册Bean定义的**行为**。通过BeanDefinitionReader接口（Bean定义读取接口），定义加载BeanDefinition功能。即BeanDefinitionReader依赖ResourceLoader和BeanDefinitionRegistry。
 
-![BeanFactory&#x63A5;&#x53E3;&#x6269;&#x5C55;UML&#x56FE;](../.gitbook/assets/step05-du-qu-pei-zhi-beanfactory-kuo-zhan-.png)
+![BeanFactory接口扩展UML图](../.gitbook/assets/step05-du-qu-pei-zhi-beanfactory-kuo-zhan-.png)
 
 【Bean工厂部分】
 
@@ -43,7 +68,7 @@ description: 10/03
 
 根据本需求（读取配置注册BeanDefinition），以及后续需求，增加框架扩展性，进行下列拆解设计（参考spring源码）：
 
-* BeanFactory：定义获取Bean行为，增加 getBean\(beanName, Class&lt;T&gt; requiredType\)按类型获取（通过泛型解决代码强转问题）；
+* BeanFactory：定义获取Bean行为，增加 getBean(beanName, Class\<T> requiredType)按类型获取（通过泛型解决代码强转问题）；
 * ListableBeanFactory：继承BeanFactory的接口，增加管理Bean的功能（getBeansOfType，getBeanDefinitonNames）；
 * HierarchicalBeanFactory：分层BeanFactory，增加获取父类BeanFactory从而扩展工厂的层次子接口；
 * AutowireCapableBeanFactory：增加自动化处理工厂配置的功能；
@@ -51,8 +76,6 @@ description: 10/03
 * ConfigurableListableBeanFactory：增加分析、修改Bean，预先实例化功能的接口；
 
 ## 三、实现
-
-
 
 
 
