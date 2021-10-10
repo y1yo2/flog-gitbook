@@ -125,7 +125,7 @@ public class FileSystemResource implements Resource{
 }
 ```
 
-
+#### UrlResource
 
 ```java
 public class UrlResource implements Resource {
@@ -147,6 +147,7 @@ public class UrlResource implements Resource {
             throw e;
         }
 
+    }
 }
 ```
 
