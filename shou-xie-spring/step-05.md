@@ -75,7 +75,7 @@ description: 10/03
 
 ## 三、实现
 
-
+#### Resource
 
 ```java
 public interface Resource {
@@ -85,10 +85,24 @@ public interface Resource {
 }
 ```
 
-
+#### ClassPathResource
 
 ```java
-public
+public class ClassPathResource implements Resource {
+
+    private final String path;
+
+    private final ClassLoader classLoader;
+
+    @Override
+    public InputStream getInputStream() throws Exception {
+        InputStream inputStream = classLoader.getResourceAsStream(path);
+        if (inputStream == null) {
+            throw new FileNotFoundException(this.path + "cannot be opened because file not found");
+        }
+        return inputStream;
+    }
+}
 ```
 
 
@@ -121,6 +135,8 @@ public
 ```java
 public
 ```
+
+
 
 ```java
 public
