@@ -337,6 +337,51 @@ public class XMLBeanDefinitionReader extends AbstractBeanDefinitionReader {
 }
 ```
 
+### TestDefaultResourceLoader
+
+```java
+@Before
+    public void init() {
+        resourceLoader = new DefaultResourceLoader();
+    }
+
+    @Test
+    public void test_classpath() throws Exception {
+        Resource resource = resourceLoader.getResource("classpath:flow1/config.cfg");
+        InputStream is = resource.getInputStream();
+//        IoUtil.readUtf8(is);
+        readUTF8(is);
+    }
+
+    @Test
+    public void test_file() throws Exception {
+        Resource resource = resourceLoader.getResource("D://test.txt");
+        InputStream is = resource.getInputStream();
+        readUTF8(is);
+    }
+
+//    private static String URL = "https://github.com/fuzhengwei/small-spring/blob/main/small-spring-step-05/src/main/java/cn/bugstack/springframework/util/ClassUtils.java";
+    private static String URL = "http://git.dova.me/shixiang/api.sx.shixiangcap.com/blob/master/%E6%9B%BF%E6%8D%A2.txt";
+
+    @Test
+    public void test_url() throws Exception {
+        Resource resource = resourceLoader.getResource(URL);
+        InputStream is = resource.getInputStream();
+        readUTF8(is);
+    }
+
+    private static void readUTF8(InputStream is) throws IOException {
+        int bytelen = is.available();
+        byte[] result = new byte[bytelen];
+        int resultint =  is.read(result);
+        if (resultint != bytelen) {
+            throw new IOException("is.available != is.read");
+        }
+        String str = new String(result, Charset.forName("UTF-8"));
+        System.out.println(str);
+    }
+```
+
 
 
 ```java
@@ -355,12 +400,6 @@ public class XMLBeanDefinitionReader extends AbstractBeanDefinitionReader {
         userService.queryUserInfo();
 
     }
-```
-
-
-
-```java
-public
 ```
 
 
