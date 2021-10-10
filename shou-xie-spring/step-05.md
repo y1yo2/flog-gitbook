@@ -75,7 +75,7 @@ description: 10/03
 
 ## 三、实现
 
-#### Resource
+### Resource
 
 ```java
 public interface Resource {
@@ -85,7 +85,7 @@ public interface Resource {
 }
 ```
 
-#### ClassPathResource
+### ClassPathResource
 
 ```java
 public class ClassPathResource implements Resource {
@@ -105,7 +105,7 @@ public class ClassPathResource implements Resource {
 }
 ```
 
-#### FileSystemResource
+### FileSystemResource
 
 ```java
 public class FileSystemResource implements Resource{
@@ -125,7 +125,7 @@ public class FileSystemResource implements Resource{
 }
 ```
 
-#### UrlResource
+### UrlResource
 
 ```java
 public class UrlResource implements Resource {
@@ -151,7 +151,7 @@ public class UrlResource implements Resource {
 }
 ```
 
-#### ResourceLoader
+### ResourceLoader
 
 ```java
 public interface ResourceLoader {
@@ -162,7 +162,7 @@ public interface ResourceLoader {
 }
 ```
 
-#### DefaultResourceLoader
+### DefaultResourceLoader
 
 ```java
 public class DefaultResourceLoader implements ResourceLoader{
@@ -184,29 +184,7 @@ public class DefaultResourceLoader implements ResourceLoader{
 }
 ```
 
-####
-
-```java
-public class DefaultResourceLoader implements ResourceLoader{
-
-    @Override
-    public Resource getResource(String path) {
-        Assert.notNull(path, "Path must be not null");
-        if (path.startsWith(CLASSPATH_PREFIX)) {
-            // 通过 classpath:前缀，标识使用ClassPathResource，从类路径中加载资源
-            return new ClassPathResource(path.substring(CLASSPATH_PREFIX.length()));
-        }
-        try {
-            return new UrlResource(path);
-        }catch (MalformedURLException e) {
-            return new FileSystemResource(path);
-        }
-
-    }
-}
-```
-
-#### BeanDefinitionReader
+### BeanDefinitionReader
 
 ```java
 public interface BeanDefinitionReader {
@@ -222,6 +200,11 @@ public interface BeanDefinitionReader {
     void loadResource(String path);
 
 }
+```
+
+
+
+```java
 ```
 
 
