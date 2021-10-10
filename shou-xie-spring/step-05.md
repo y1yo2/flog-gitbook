@@ -33,9 +33,7 @@ description: 10/03
     }
 ```
 
-将 BeanDefinition放入 xml配置文件中，通过读取并解析xml生成 BeanDefinition。
-
-
+将 BeanDefinition放入 xml配置文件中，通过读取并解析xml生成 BeanDefinition。通过读取配置完成步骤2、3的动作。
 
 
 
