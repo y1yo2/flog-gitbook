@@ -184,6 +184,28 @@ public class DefaultResourceLoader implements ResourceLoader{
 }
 ```
 
+####
+
+```java
+public class DefaultResourceLoader implements ResourceLoader{
+
+    @Override
+    public Resource getResource(String path) {
+        Assert.notNull(path, "Path must be not null");
+        if (path.startsWith(CLASSPATH_PREFIX)) {
+            // 通过 classpath:前缀，标识使用ClassPathResource，从类路径中加载资源
+            return new ClassPathResource(path.substring(CLASSPATH_PREFIX.length()));
+        }
+        try {
+            return new UrlResource(path);
+        }catch (MalformedURLException e) {
+            return new FileSystemResource(path);
+        }
+
+    }
+}
+```
+
 #### BeanDefinitionReader
 
 ```java
@@ -204,6 +226,10 @@ public interface BeanDefinitionReader {
 
 
 
+```java
+public
+```
+
 
 
 ```java
@@ -212,15 +238,27 @@ public
 
 
 
+```java
+public
+```
 
 
 
+```java
+public
+```
 
 
 
+```java
+public
+```
 
 
 
+```java
+public
+```
 
 
 
