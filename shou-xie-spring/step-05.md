@@ -337,7 +337,7 @@ public class XMLBeanDefinitionReader extends AbstractBeanDefinitionReader {
 }
 ```
 
-### TestDefaultResourceLoader
+### Test_DefaultResourceLoader
 
 ```java
 @Before
@@ -382,7 +382,7 @@ public class XMLBeanDefinitionReader extends AbstractBeanDefinitionReader {
     }
 ```
 
-
+### Test_XMLBeanDefinitionReader
 
 ```java
 @Test
@@ -404,25 +404,9 @@ public class XMLBeanDefinitionReader extends AbstractBeanDefinitionReader {
 
 
 
-```java
-public
-```
 
 
 
-```java
-public
-```
 
 
-
-```java
-public
-```
-
-
-
-```java
-public
-```
 
