@@ -77,11 +77,52 @@ description: 10/03
 
 
 
+```java
+public interface Resource {
+
+    public abstract InputStream getInputStream() throws Exception;
+
+}
+```
 
 
 
+```java
+public
+```
 
 
 
+```java
+public
+```
 
+
+
+```java
+public
+```
+
+
+
+```java
+publicpublic
+
+```
+
+
+
+```java
+public
+```
+
+
+
+```java
+public
+```
+
+```java
+public
+```
 
