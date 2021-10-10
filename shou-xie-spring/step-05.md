@@ -140,7 +140,6 @@ public class UrlResource implements Resource {
 
         try {
             return connection.getInputStream();
-//            return testGet();
         }catch (IOException e) {
             if (connection instanceof HttpURLConnection) {
                  ((HttpURLConnection) connection).disconnect();
@@ -148,7 +147,7 @@ public class UrlResource implements Resource {
             throw e;
         }
 
-    }
+}
 ```
 
 
