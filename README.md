@@ -6,18 +6,31 @@ description: 咕噜的个人博客，记录工作、学习、生活；只学习�
 
 ### 目录
 
-### 每日收获（未分类）
+### 每日收获
 
-* [服务网格是怎么来的？](mei-ri-shou-huo/fu-wu-wang-ge-shi-zen-me-lai-de.md)
-* [研发流程科普](mei-ri-shou-huo/yan-fa-liu-cheng-ke-pu.md)
-* [打网经历](mei-ri-shou-huo/da-wang-jing-li.md)
-* [Confluence空间备份迁移、合并、删除权限](mei-ri-shou-huo/confluence-kong-jian-bei-fen-qian-yi-he-bing-shan-chu-quan-xian.md)
-
-### 起源系列
-
-* [Senior's blog](qi-yuan-xi-lie/seniors-blog.md)
+日常收获沉淀的地方，未成体系的知识，积累的经验。
 
 ### 每日随笔
 
-* [2021年](mei-ri-sui-bi/2021-nian/)
+每天想到什么就记录下来，充满灵感的地方。
+
+### 读书笔记
+
+读过的书，走过的路，遇过的人。
+
+### 云原生
+
+云原生的知识和经验，PaaS即是程序员的机会，也是程序员的危机。
+
+### 好好做项目
+
+我想好好做项目。
+
+### 数据库
+
+数据库是软件工程的基石，数据是国民生产要素之一。
+
+### 手写SPRING
+
+安静写代码的时光是幸福的。
 

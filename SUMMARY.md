@@ -29,14 +29,19 @@
   * [June](mei-ri-sui-bi/2021-nian/june.md)
   * [July](mei-ri-sui-bi/2021-nian/july.md)
   * [August](mei-ri-sui-bi/2021-nian/august.md)
+  * [September](mei-ri-sui-bi/2021-nian/september.md)
+  * [October](mei-ri-sui-bi/2021-nian/october.md)
 * [备注](mei-ri-sui-bi/bei-zhu.md)
 
 ## 读书笔记
 
 * [非暴力沟通-01](du-shu-bi-ji/fei-bao-li-gou-tong-01.md)
 * [非暴力沟通-02](du-shu-bi-ji/fei-bao-li-gou-tong-02.md)
+* [读《如果变成修正主义，你们怎么办？》有感](du-shu-bi-ji/du-ru-guo-bian-cheng-xiu-zheng-zhu-yi-ni-men-zen-mo-ban-you-gan.md)
+* [读《挣钱的本质有三个》有感](du-shu-bi-ji/du-zheng-qian-de-ben-zhi-you-san-ge-you-gan.md)
+* [读《2021-2022 经济年会上房地产被定义为支柱产业，这将会对楼市产生怎样的影响？》有感](du-shu-bi-ji/du-20212022-jing-ji-nian-hui-shang-fang-di-chan-bei-ding-yi-wei-zhi-zhu-chan-ye-zhe-jiang-hui-dui-lo.md)
 
-## 云原生 <a id="cloud-native"></a>
+## 云原生 <a href="#cloud-native" id="cloud-native"></a>
 
 * [虚拟机、容器、云原生-1](cloud-native/xu-ni-ji-rong-qi-yun-yuan-sheng-1.md)
 * [虚拟机、容器、云原生-2](cloud-native/xu-ni-ji-rong-qi-yun-yuan-sheng-2.md)
@@ -71,4 +76,3 @@
 * [Step 03：带参构造函数](shou-xie-spring/step-03-dai-can-gou-zao-han-shu.md)
 * [Step 04：依赖注入](shou-xie-spring/step-04-yi-lai-zhu-ru.md)
 * [Step 05：读取配置](shou-xie-spring/step-05.md)
-

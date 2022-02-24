@@ -16,7 +16,9 @@ description: 用于测试容器网络、镜像构建，或提供基础环境的d
 1. 使用dockerHub的centos8镜像
 2. 编写DockerFile构建通用镜像
 
-{% embed url="https://hub.docker.com/\_/centos" caption="Docker Hub-Centos" %}
+{% embed url="https://hub.docker.com/_/centos" %}
+Docker Hub-Centos
+{% endembed %}
 
 ```bash
 FROM centos:centos8 
@@ -42,9 +44,9 @@ ENTRYPOINT ['tail', '-f', '/dev/null']
 
 > 用法：
 >
-> CMD \["可执行文件", "param"\]   （推荐用法）
+> CMD \["可执行文件", "param"]   （推荐用法）
 >
-> CMD \["param"\]   （作为 ENTRYPOINT 的默认参数）
+> CMD \["param"]   （作为 ENTRYPOINT 的默认参数）
 >
 > CMD 命令 param
 
@@ -57,7 +59,7 @@ ENTRYPOINT ['tail', '-f', '/dev/null']
 
 > 用法：
 >
-> ENTRYPOINT \["可执行文件", "param"\]（推荐用法）
+> ENTRYPOINT \["可执行文件", "param"]（推荐用法）
 >
 > ENTRYPOINT 命令 param
 >
@@ -125,55 +127,55 @@ env #查看容器的环境变量。b=a1, c=a2
 
 `source ~/.bash_profile` 让修改马上生效
 
-`export PATH=/home/me/apps:$PATH` 设置变量，仅对当前shell\(sh/bash\)有效。直接生效，关闭shell后失效。
+`export PATH=/home/me/apps:$PATH` 设置变量，仅对当前shell(sh/bash)有效。直接生效，关闭shell后失效。
 
 * 查看环境变量
 
- `echo $SHELL` 显示一个环境变量
+&#x20;`echo $SHELL` 显示一个环境变量
 
- `env`  显示所有环境变量
+&#x20;`env`  显示所有环境变量
 
- `unset $TEST`  删除一个环节变量
+&#x20;`unset $TEST`  删除一个环节变量
 
- `readonly $TEST`  设置变量为只读，不可修改删除
+&#x20;`readonly $TEST`  设置变量为只读，不可修改删除
 
 ### 关于执行shell脚本（exec模式）
 
- `./xxx.sh` 使用shell脚本内指定的sh/bash作为subshell（子shell）执行，但shell脚本需要**执行权限**。  
+&#x20;`./xxx.sh` 使用shell脚本内指定的sh/bash作为subshell（子shell）执行，但shell脚本需要**执行权限**。 &#x20;
 
- `sh/bash xxx.sh` 使用sh/bash作为subshell（子shell）执行，shell脚本无需执行权限。  
+&#x20;`sh/bash xxx.sh` 使用sh/bash作为subshell（子shell）执行，shell脚本无需执行权限。 &#x20;
 
- `source xxx.sh`  或 `. xxx.sh` 使用当前shell执行shell脚本，脚本无需执行权限。  
+&#x20;`source xxx.sh`  或 `. xxx.sh` 使用当前shell执行shell脚本，脚本无需执行权限。 &#x20;
 
 ### 关于启动进程参数
 
 执行shell命令时，默认打开3个文件。
 
-| **类型** | **文件描述符** | **默认情况** | **对应文件句柄位置** |
-| :---: | :---: | :---: | :---: |
-| 标准输入（standard input） | 0 | 从键盘获得输入 | /proc/slef/fd/0 |
-| 标准输出（standard output） | 1 | 输出到屏幕（即控制台） | /proc/slef/fd/1 |
-| 错误输出（error output） | 2 | 输出到屏幕（即控制台） | /proc/slef/fd/2 |
+|         **类型**        | **文件描述符** |   **默认情况**  |   **对应文件句柄位置**  |
+| :-------------------: | :-------: | :---------: | :-------------: |
+|  标准输入（standard input） |     0     |   从键盘获得输入   | /proc/slef/fd/0 |
+| 标准输出（standard output） |     1     | 输出到屏幕（即控制台） | /proc/slef/fd/1 |
+|   错误输出（error output）  |     2     | 输出到屏幕（即控制台） | /proc/slef/fd/2 |
 
 因此命令执行时，默认从键盘获取输入（使用0），结果输出到屏幕（使用1）。
 
 * 输出输入重定向
 
-| **命令** | **作用** |
-| :--- | :--- |
-| 1&gt;filename | 标准输出重定向到file |
-| &gt;filename | 同上 |
-| 2&gt;filename | 错误输出重定向到file |
-| 0&lt;filename | file作为标准输入 |
-| &lt;filename | 同上 |
+| **命令**      | **作用**       |
+| ----------- | ------------ |
+| 1>filename  | 标准输出重定向到file |
+| >filename   | 同上           |
+| 2>filename  | 错误输出重定向到file |
+| 0\<filename | file作为标准输入   |
+| \<filename  | 同上           |
 
 * 常用的重定向
 
- `>/dev/null` ，标准输出指向/dev/null（linux的空设备文件，往该文件写入内容会丢失）。
+&#x20;`>/dev/null` ，标准输出指向/dev/null（linux的空设备文件，往该文件写入内容会丢失）。
 
- `2>&1` ，使用&将两个输出绑定，错误输出指向标准输出。
+&#x20;`2>&1` ，使用&将两个输出绑定，错误输出指向标准输出。
 
- `>/dev/null 2>&1` ，先将标准输出指向/dev/null，再将错误输出指向标准输出即/dev/null。
+&#x20;`>/dev/null 2>&1` ，先将标准输出指向/dev/null，再将错误输出指向标准输出即/dev/null。
 
 ### 关于前台进程、后台进程
 
@@ -187,21 +189,19 @@ nohup 加上后，用户退出或终端关闭都不影响当前后台进程。
 
 * 查看进程
 
- `jobs -l` ，查看后台进程。
+&#x20;`jobs -l` ，查看后台进程。
 
- `ps -aux`，查看所有进程。
+&#x20;`ps -aux`，查看所有进程。
 
- `kill %jobid` ， `kill pid` ，终止进程。
+&#x20;`kill %jobid` ， `kill pid` ，终止进程。
 
 * 运行中进程放入后台、前台
 
 运行中的前台进程，ctrl + z 放入后台并暂停。
 
- `bg %jobid` 将暂停的后台进程运行。
+&#x20;`bg %jobid` 将暂停的后台进程运行。
 
- `fg %jobid` 将后台进程放上前台。
-
-
+&#x20;`fg %jobid` 将后台进程放上前台。
 
 
 
