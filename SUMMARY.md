@@ -31,6 +31,10 @@
   * [August](mei-ri-sui-bi/2021-nian/august.md)
   * [September](mei-ri-sui-bi/2021-nian/september.md)
   * [October](mei-ri-sui-bi/2021-nian/october.md)
+* [2022年](mei-ri-sui-bi/2022-nian/README.md)
+  * [January](mei-ri-sui-bi/2022-nian/january.md)
+  * [February](mei-ri-sui-bi/2022-nian/february.md)
+  * [March](mei-ri-sui-bi/2022-nian/march.md)
 * [备注](mei-ri-sui-bi/bei-zhu.md)
 
 ## 读书笔记
