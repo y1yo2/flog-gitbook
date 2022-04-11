@@ -72,6 +72,7 @@
 ## 数据库
 
 * [MySQL保证数据持久性](shu-ju-ku/mysql-bao-zheng-shu-ju-chi-jiu-hua.md)
+* [MySQL Collation问题](shu-ju-ku/mysql-collation-wen-ti.md)
 
 ## 手写Spring
 

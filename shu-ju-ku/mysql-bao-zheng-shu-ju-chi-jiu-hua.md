@@ -1,5 +1,5 @@
 ---
-description: MySQL使用WAL管理数据变化，在此机制上，如何保证数据持久性？
+description: MySQL使用WAL(Write-ahead Logging)管理数据变化，在此机制上，如何保证数据持久性？
 ---
 
 # MySQL保证数据持久性
