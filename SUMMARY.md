@@ -50,6 +50,7 @@
 * [虚拟机、容器、云原生-1](cloud-native/xu-ni-ji-rong-qi-yun-yuan-sheng-1.md)
 * [虚拟机、容器、云原生-2](cloud-native/xu-ni-ji-rong-qi-yun-yuan-sheng-2.md)
 * [云原生-存储类型](cloud-native/yun-yuan-sheng-cun-chu-lei-xing.md)
+* [云存储](cloud-native/yun-cun-chu.md)
 
 ## 好好做项目
 
@@ -68,6 +69,7 @@
 * [Mybatis总结](hao-hao-zuo-xiang-mu/mybatis-zong-jie.md)
 * [部署MongoDB-standalone](hao-hao-zuo-xiang-mu/bu-shu-mongodbstandalone.md)
 * [工程作者信息](hao-hao-zuo-xiang-mu/gong-cheng-zuo-zhe-xin-xi.md)
+* [OSS-分片上传下载](hao-hao-zuo-xiang-mu/oss-fen-pian-shang-chuan-xia-zai.md)
 
 ## 数据库
 
