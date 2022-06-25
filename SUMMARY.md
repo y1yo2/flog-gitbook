@@ -44,6 +44,7 @@
 * [读《如果变成修正主义，你们怎么办？》有感](du-shu-bi-ji/du-ru-guo-bian-cheng-xiu-zheng-zhu-yi-ni-men-zen-mo-ban-you-gan.md)
 * [读《挣钱的本质有三个》有感](du-shu-bi-ji/du-zheng-qian-de-ben-zhi-you-san-ge-you-gan.md)
 * [读《2021-2022 经济年会上房地产被定义为支柱产业，这将会对楼市产生怎样的影响？》有感](du-shu-bi-ji/du-20212022-jing-ji-nian-hui-shang-fang-di-chan-bei-ding-yi-wei-zhi-zhu-chan-ye-zhe-jiang-hui-dui-lo.md)
+* [读《指标、方法与稳定盈利的关系》有感](du-shu-bi-ji/du-zhi-biao-fang-fa-yu-wen-ding-ying-li-de-guan-xi-you-gan.md)
 
 ## 云原生 <a href="#cloud-native" id="cloud-native"></a>
 
